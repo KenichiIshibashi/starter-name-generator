@@ -8,14 +8,15 @@
     "url": "https://github.com/Thinkful-Ed/starter-name-generator"
   },
   "scripts": {
-    "build": "npm -prefix client run build",
+    "build": "npm -prefix client build",
     "preinstall": "cd ./backend && npm install",
     "install": "cd ./client && npm install",
-    "start": "npx concurrently 'npm run start:backend' 'npm run start:client'",
-    "start:backend": "npm --prefix ./backend start",
-    "start:client": "npm --prefix ./client start",
+    "start": "npx concurrently 'npm start:backend' 'npm start:client'",
+    "start:backend": "npm start --prefix ./backend",
+    "start:client": "npm start --prefix ./client",
     "start:dev": "npx concurrently 'npm run start:dev --prefix ./backend' 'npm start --prefix ./client'",
-    "test": "npm run test:client && npm run test:backend"
+    "test": "npm test:client && npm run test:backend",
+    "start:client": "cd client && npm start"
   },
   "keywords": [],
   "author": "Thinkful, Inc.",
